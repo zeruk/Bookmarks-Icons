@@ -1,0 +1,21 @@
+{
+
+  "manifest_version": 2,
+  "name": "BookmarksIcons",
+  "version": "1.0",
+
+  "description": "Makes your bookmarks smaller",
+
+  "icons": {
+    "48": "icons8-book-shelf-48.png",
+    "96": "icons8-book-shelf-96.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.mozilla.org/*"],
+      "js": ["main.js"]
+    }
+  ]
+
+}
