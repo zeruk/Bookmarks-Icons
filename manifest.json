@@ -5,6 +5,7 @@
   "version": "1.0",
 
   "description": "Makes your bookmarks smaller",
+  "homepage_url": "https://github.com/Zeruk/Bookmarks-Icons",
 
   "icons": {
     "48": "icons8-book-shelf-48.png",
@@ -24,7 +25,10 @@
       "19": "icons8-book-shelf-19.png",
       "38": "icons8-book-shelf-38.png"
     },
-    "default_title": "Show bookmarks"
-  }
-
+    "default_title": "Show bookmarks",
+    "default_popup": "popup/bm.html"
+  },
+  "web_accessible_resources": [
+    "popup/bm.css"
+  ]
 }

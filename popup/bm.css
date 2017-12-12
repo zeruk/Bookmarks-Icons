@@ -1,0 +1,18 @@
+img{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: 0;
+}
+.description{
+    display: /*inline-block;*/none;
+    line-height: 16px;
+    top: -2px;
+    position: relative;
+}
+img:hover + .description{
+    display: inline-block;
+}
+.description:hover{
+    display: inline-block;
+}

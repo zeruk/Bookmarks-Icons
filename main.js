@@ -1,7 +1,7 @@
 //bookmark.title
 
-browser.browserAction.onClicked.addListener(HelloF);
+browser.browserAction.onClicked.addListener(Show);
 
 function HelloF(){
-    Console.log("Hello");
+    console.log("Hello");
 }
