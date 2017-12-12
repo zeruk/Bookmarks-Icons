@@ -29,6 +29,6 @@
   "web_accessible_resources": [
     "popup/bm.css",
     "popup/choose.js",
-    "popup/jquery-3.2.1.min.js",
+    "popup/jquery-3.2.1.min.js"
   ]
 }
