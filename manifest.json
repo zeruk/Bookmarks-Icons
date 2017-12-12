@@ -17,9 +17,6 @@
     "tabs"
   ],
   
-  "background": {
-    "scripts": ["main.js"]
-  },
   "browser_action": {
     "default_icon": {
       "19": "icons8-book-shelf-19.png",
@@ -28,7 +25,10 @@
     "default_title": "Show bookmarks",
     "default_popup": "popup/bm.html"
   },
+
   "web_accessible_resources": [
-    "popup/bm.css"
+    "popup/bm.css",
+    "popup/choose.js",
+    "popup/jquery-3.2.1.min.js",
   ]
 }

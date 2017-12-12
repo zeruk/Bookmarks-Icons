@@ -2,13 +2,16 @@ img{
     display: inline-block;
     width: 16px;
     height: 16px;
-    margin: 0;
+    margin: -2px;
+    padding: 0;
 }
 .description{
-    display: /*inline-block;*/none;
+    display: none;
     line-height: 16px;
     top: -2px;
     position: relative;
+    margin: 0;
+    padding-right: 6px;
 }
 img:hover + .description{
     display: inline-block;
