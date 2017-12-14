@@ -2,7 +2,7 @@
 $(function() {
     var bookmTr = browser.bookmarks.getTree(function(tree){
         bookm = tree[0].children[1].children;
-        console.log(bookm);
+        //console.log(bookm);
         for(var i = 0; i<bookm.length; i++){
             var item = bookm[i];
             //console.log(item);
@@ -16,12 +16,13 @@ $(function() {
             $(".wrapper").append(s);
         }
     })
-    
+
     
 });
 
-$("a").bind( "click", function() {
-    alert($(this).attr("to"));
+
+$("a").on( "click", function() {
+    console.log("hello");
     var creating = browser.tabs.create(
         { url: $(this).attr("to")
     });
