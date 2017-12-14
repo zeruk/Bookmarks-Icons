@@ -1,7 +1,7 @@
-$("img").bind( "click", function() {
-    alert( "User clicked on 'foo.'" );
+$("a").bind( "click", function() {
+    var creating = browser.tabs.create(
+        { url: $(this).attr("to")
+    });
+    //console.log($(this).attr("to"))
    });
-$("img").ready(function(){
-    alert("hello");
-})
    
