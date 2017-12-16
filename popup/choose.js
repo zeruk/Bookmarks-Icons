@@ -23,6 +23,8 @@ var bookmTr = browser.bookmarks.getTree(function(tree){
             aEl.appendChild(descEl);
             document.getElementById("wrapper").appendChild(aEl);
         }
-        catch{}
+        catch(err){
+            ;
+        }
     }
 });
