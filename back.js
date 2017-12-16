@@ -6,6 +6,8 @@ function bmiconsOpen(UR){
     browser.tabs.update({url: UR});
 }
 
+//bmiconsOpen("http://google.com");
+
 /*
 
 ,

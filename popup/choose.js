@@ -22,11 +22,16 @@ $(function() {
             }
             catch{}
         }
-    })
-    $('a').bind("click", function(){
-        console.log("WAU");
-        browser.tabs.update({url: $(this).attr("to")});
     });
+    
+    // var page = browser.extension.getBackgroundPage()
+    // console.log(page.location);
+    
+    $("a").onclick = function(e) {
+        console.log("hello");
+        var creating = browser.tabs.create(
+            { url: $(e).attr("to")}
+        );
+    };
     console.log("binded");
 });
-   
