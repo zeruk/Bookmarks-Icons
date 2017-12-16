@@ -1,29 +1,26 @@
 {
-
   "manifest_version": 2,
   "name": "BookmarksIcons",
   "version": "1.0",
+  "author": "Zeruk",
 
   "description": "Makes your bookmarks smaller",
   "homepage_url": "https://github.com/Zeruk/Bookmarks-Icons",
 
   "icons": {
-    "48": "icons8-book-shelf-48.png",
-    "96": "icons8-book-shelf-96.png"
+    "48": "icons/icons8-book-shelf-48.png",
+    "96": "icons/icons8-book-shelf-96.png"
   },
 
   "permissions": [
     "bookmarks",
-    "tabs",
-    "alarms",
-    "activeTab",
-    "<all_urls>"
+    "tabs"
   ],
   
   "browser_action": {
     "default_icon": {
-      "19": "icons8-book-shelf-19.png",
-      "38": "icons8-book-shelf-38.png"
+      "19": "icons/icons8-book-shelf-19.png",
+      "38": "icons/icons8-book-shelf-38.png"
     },
     "default_title": "Show bookmarks",
     "default_popup": "popup/bm.html"
