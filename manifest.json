@@ -16,7 +16,8 @@
     "bookmarks",
     "tabs",
     "alarms",
-    "activeTab"
+    "activeTab",
+    "<all_urls>"
   ],
   
   "browser_action": {
@@ -26,9 +27,5 @@
     },
     "default_title": "Show bookmarks",
     "default_popup": "popup/bm.html"
-  },
-  
-  "background":{
-    "scripts": ["back.js"]
   }
 }
