@@ -1,15 +1,17 @@
 
 $(function() {
     var bookmTr = browser.bookmarks.getTree(function(tree){
-        bookm = tree[0].children[1].children;
-        //console.log(bookm);
+        var bookm = tree[0].children[1].children;
+        console.log(bookm[0]);
         for(var i = 0; i<bookm.length; i++){
             var item = bookm[i];
             //console.log(item);
             s = '<a to="';
             s+=item.url;
-            s+='"><img src="';
-            s+="https://otvet.imgsmail.ru/download/u_d517c822f47a21c3bac79ab27552a9fb_800.jpg";
+            s+='"><img src="http://www.google.com/s2/favicons?domain=';
+            var slidx=item.url.indexOf("//")
+            s+=item.url.slice(slidx+2,item.url.length);
+            console.log(s);
             s+='"><div class="description">';
             s+=item.title.length> 15 ? item.title.slice(0,15)+'...': item.title;
             s+='</div></a>';
