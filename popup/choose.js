@@ -1,4 +1,7 @@
-function createBMbuttons(tree,wrapper){
+var TREE;
+
+function createBMbuttons(Tree,wrapper){
+    console.log(Tree);
     for(var i = 0; i<tree.length; i++){
         var item = tree[i];
         try{
@@ -23,7 +26,7 @@ function createBMbuttons(tree,wrapper){
                 };
                 var slidx=item.url.indexOf("//");
                 imgEl.setAttribute("src", "http://www.google.com/s2/favicons?domain="+item.url.slice(slidx+2,item.url.length));
-                
+
                 descEl.innerText = item.title.length> 15 ? item.title.slice(0,15)+'...': item.title;
             }
 
@@ -38,6 +41,7 @@ function createBMbuttons(tree,wrapper){
 }
 
 var bookmTr = browser.bookmarks.getTree(function(tree){
-    var bookm = tree[0].children[1].children;
+    TREE = tree;
+    var bookm = TREE[0].children[1].children;
     createBMbuttons(bookm,document.getElementById("wrapper"));
 });
