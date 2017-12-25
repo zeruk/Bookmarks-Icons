@@ -2,7 +2,7 @@ var TREE,tNodes = [];
 
 function createBMbuttons(Tree,wrapper){
     console.log(Tree);
-    for(var i = 0; i<Tree.length; i++){
+    for(var i = 0; i<Tree.length && i < 20; i++){
         var item = Tree[i];
         try{
             var aEl = document.createElement("a");
@@ -17,6 +17,7 @@ function createBMbuttons(Tree,wrapper){
                 //console.log(tNodes[NodeN],NodeN);
                 aEl.onclick = function(){
                     createBMbuttons(tNodes[this.getAttribute("N")],descEl);
+                    this.onclick = "";
                 }
             }
             else{
