@@ -1,3 +1,7 @@
+function createBMbuttons(tree){
+
+}
+
 var bookmTr = browser.bookmarks.getTree(function(tree){
     var bookm = tree[0].children[1].children;
     for(var i = 0; i<bookm.length; i++){
