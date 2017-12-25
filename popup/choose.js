@@ -1,11 +1,6 @@
-function createBMbuttons(tree){
-
-}
-
-var bookmTr = browser.bookmarks.getTree(function(tree){
-    var bookm = tree[0].children[1].children;
-    for(var i = 0; i<bookm.length; i++){
-        var item = bookm[i];
+function createBMbuttons(tree,wrapper){
+    for(var i = 0; i<tree.length; i++){
+        var item = tree[i];
         try{
             var aEl = document.createElement("a");
             var imgEl = document.createElement("img");
@@ -14,6 +9,9 @@ var bookmTr = browser.bookmarks.getTree(function(tree){
 
             if(item.url == undefined){ 
                 imgEl.setAttribute("src", "folder.png");
+                aEl.onclick = function(){
+                    createBMbuttons(tree[i],descEl);
+                }
                 console.log(item.title);
             }
             else{
@@ -23,18 +21,23 @@ var bookmTr = browser.bookmarks.getTree(function(tree){
                         { url: this.getAttribute("to")}
                     );
                 };
-
                 var slidx=item.url.indexOf("//");
                 imgEl.setAttribute("src", "http://www.google.com/s2/favicons?domain="+item.url.slice(slidx+2,item.url.length));
-
+                
                 descEl.innerText = item.title.length> 15 ? item.title.slice(0,15)+'...': item.title;
             }
+
             aEl.appendChild(imgEl);
             aEl.appendChild(descEl);
-            document.getElementById("wrapper").appendChild(aEl);
+            wrapper.appendChild(aEl);
         }
         catch(err){
             ;
         }
     }
+}
+
+var bookmTr = browser.bookmarks.getTree(function(tree){
+    var bookm = tree[0].children[1].children;
+    createBMbuttons(bookm,document.getElementById("wrapper"));
 });
