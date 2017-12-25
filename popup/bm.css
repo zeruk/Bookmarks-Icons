@@ -1,5 +1,13 @@
+@font-face {
+    font-family: 'PT Mono';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Fira Mono'), url(FiraMono-Regular.woff2) format('woff')
+}
+
 body{
-    width: 780px;
+    font-family: 'Fira Mono';
+    width: 790px;
     height: 16px;
     background-color: #f9f9fa;
 }
@@ -16,6 +24,10 @@ img{
     position: relative;
     margin: 0;
     padding-right: 6px;
+}
+.white:hover{
+    background-color: #f9f9fa !important;
+    top:0px !important;
 }
 .description:hover{
     display: inline-block;

@@ -13,7 +13,8 @@ function createBMbuttons(Tree,wrapper,limNum = 45){
             if(item.url == undefined){ 
                 aEl.setAttribute("N",tNodes.length+1);
                 imgEl.setAttribute("src", "folder.png");
-                createBMbuttons(Tree[i].children,descEl,15);
+                createBMbuttons(Tree[i].children,descEl,12);
+                aEl.classList.add('white');
             }
             else{
                 console.log(item.title);
