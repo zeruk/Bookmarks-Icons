@@ -1,4 +1,4 @@
-var TREE;
+var TREE,tNodes = [];
 
 function createBMbuttons(Tree,wrapper){
     console.log(Tree);
@@ -11,13 +11,13 @@ function createBMbuttons(Tree,wrapper){
             descEl.classList.add('description');
 
             if(item.url == undefined){ 
+                aEl.setAttribute("N",tNodes.length+1);
                 imgEl.setAttribute("src", "folder.png");
-                var tNode = Tree[i].children;
-                //console.log(tNode);
+                tNodes.push(Tree[i].children);
+                //console.log(tNodes[NodeN],NodeN);
                 aEl.onclick = function(){
-                    createBMbuttons(tNode,descEl);
+                    createBMbuttons(tNodes[this.getAttribute("N")],descEl);
                 }
-                //console.log(item.title);
             }
             else{
                 console.log(item.title);
