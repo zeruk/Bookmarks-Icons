@@ -2,8 +2,8 @@ var TREE;
 
 function createBMbuttons(Tree,wrapper){
     console.log(Tree);
-    for(var i = 0; i<tree.length; i++){
-        var item = tree[i];
+    for(var i = 0; i<Tree.length; i++){
+        var item = Tree[i];
         try{
             var aEl = document.createElement("a");
             var imgEl = document.createElement("img");
@@ -12,12 +12,15 @@ function createBMbuttons(Tree,wrapper){
 
             if(item.url == undefined){ 
                 imgEl.setAttribute("src", "folder.png");
+                var tNode = Tree[i].children;
+                //console.log(tNode);
                 aEl.onclick = function(){
-                    createBMbuttons(tree[i],descEl);
+                    createBMbuttons(tNode,descEl);
                 }
-                console.log(item.title);
+                //console.log(item.title);
             }
             else{
+                console.log(item.title);
                 aEl.setAttribute("to",item.url);
                 aEl.onclick = function() {
                     var creating = browser.tabs.create(
