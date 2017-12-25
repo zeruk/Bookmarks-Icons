@@ -1,7 +1,6 @@
 var TREE,tNodes = [];
 
 function createBMbuttons(Tree,wrapper,limNum = 45){
-    console.log(Tree);
     for(var i = 0; i<Tree.length && i < limNum; i++){
         var item = Tree[i];
         try{
@@ -17,7 +16,6 @@ function createBMbuttons(Tree,wrapper,limNum = 45){
                 aEl.classList.add('white');
             }
             else{
-                console.log(item.title);
                 aEl.setAttribute("to",item.url);
                 aEl.onclick = function() {
                     var creating = browser.tabs.create(
