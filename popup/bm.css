@@ -19,6 +19,12 @@ img{
     height: 16px;
     padding: 0;
 }
+sep{
+    display: inline-block;
+    width: 8px;
+    height: 16px;
+    padding: 0;
+}
 .description{
     display: none;
     line-height: 16px;

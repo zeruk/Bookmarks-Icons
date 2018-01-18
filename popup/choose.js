@@ -3,6 +3,7 @@ var TREE,tNodes = [];
 function createBMbuttons(Tree,wrapper,limNum = 45){
     for(var i = 0; i<Tree.length && i < limNum; i++){
         var item = Tree[i];
+        //console.log(item.url);
         try{
             var aEl = document.createElement("a");
             var imgEl = document.createElement("img");
@@ -15,9 +16,10 @@ function createBMbuttons(Tree,wrapper,limNum = 45){
                 createBMbuttons(Tree[i].children,descEl,12);
                 aEl.classList.add('white');
             }
-            else if(item.url == 'ata:'){
+            else if(item.url == 'data:'){
                 aEl.setAttribute("N",tNodes.length+1);
                 imgEl.setAttribute("src", "separator.png");
+                imgEl.classList.add('sep');
                 aEl.classList.add('white');
             }
             else{
