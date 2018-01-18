@@ -33,6 +33,7 @@ function createBMbuttons(Tree,wrapper,limNum = 45){
                 imgEl.setAttribute("src", "http://www.google.com/s2/favicons?domain="+item.url.slice(slidx+2,item.url.length));
 
                 descEl.innerText = item.title.length> 15 ? item.title.slice(0,15)+'...': item.title;
+                descEl.classList.add('text');
             }
 
             aEl.appendChild(imgEl);

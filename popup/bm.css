@@ -19,19 +19,18 @@ img{
     height: 16px;
     padding: 0;
 }
-sep{
-    display: inline-block;
-    width: 8px;
-    height: 16px;
-    padding: 0;
+.sep{
+    width: 8px !important;
 }
 .description{
     display: none;
     line-height: 16px;
-    top: -3px;
     position: relative;
     margin: 0;
     padding-right: 6px;
+}
+.text{
+    top: -3px;
 }
 .white:hover{
     background-color: #f9f9fa !important;
@@ -51,8 +50,8 @@ a{
     cursor: pointer;
 }
 a:hover{
-    margin-top:-2px;
-    padding: 2px;
+    /*margin-top:-2px;
+    padding: 2px;*/
     background-color: #e1e1e2;
 }
 a:hover > .description{
