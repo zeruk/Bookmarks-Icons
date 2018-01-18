@@ -15,6 +15,11 @@ function createBMbuttons(Tree,wrapper,limNum = 45){
                 createBMbuttons(Tree[i].children,descEl,12);
                 aEl.classList.add('white');
             }
+            else if(item.url == 'ata:'){
+                aEl.setAttribute("N",tNodes.length+1);
+                imgEl.setAttribute("src", "separator.png");
+                aEl.classList.add('white');
+            }
             else{
                 aEl.setAttribute("to",item.url);
                 aEl.onclick = function() {
