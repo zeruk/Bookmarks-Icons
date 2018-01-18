@@ -1,8 +1,10 @@
 @font-face {
-    font-family: 'PT Mono';
+    /*font-family: 'PT Mono';
     font-style: normal;
     font-weight: 400;
-    src: local('Fira Mono'), url(FiraMono-Regular.woff2) format('woff')
+    src: local('Fira Mono'), url(FiraMono-Regular.woff2) format('woff')*/
+    font-family: 'Segoe UI';
+    src: 'segoeui.ttf';
 }
 
 body{
