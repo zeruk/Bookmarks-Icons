@@ -1,5 +1,5 @@
 CACHE MANIFEST  
-# 2018-01-18:v3
+# 2018-01-19:v4
 bm.html
 bm.css
 choose.js

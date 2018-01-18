@@ -1,14 +1,15 @@
 @font-face {
-    /*font-family: 'PT Mono';
+    font-family: SegoeUI;
+    src: "./fonts/SegoeUIRegular.eot" format("eot"),
+    "./fonts/SegoeUIRegular.woff" format("woff"),
+    "./fonts/SegoeUIRegular.ttf" format("truetype");
     font-style: normal;
-    font-weight: 400;
-    src: local('Fira Mono'), url(FiraMono-Regular.woff2) format('woff')*/
-    font-family: 'Segoe UI';
-    src: 'segoeui.ttf';
+    font-weight: normal;
 }
 
 body{
-    font-family: 'Fira Mono';
+    font-family: Segoe UI;
+    font-size: 14px;
     width: 790px;
     height: 16px;
     background-color: #f9f9fa;
@@ -45,7 +46,6 @@ a{
     float: left;
     text-decoration: none;
     color: black;
-    font-size: 16px;
     padding-left: 2px;
     cursor: pointer;
 }
