@@ -8,14 +8,15 @@
   "homepage_url": "https://github.com/Zeruk/Bookmarks-Icons",
 
   "icons": {
-    "48": "icons/icons8-book-shelf-48.png",
-    "96": "icons/icons8-book-shelf-96.png"
+    "48": "icons/bookmark48.png",
+    "96": "icons/bookmark96.png"
   },
 
   "permissions": [
     "bookmarks",
     "activeTab",
-    "tabs"
+    "tabs",
+    "management"
   ],
 
   "options_ui": {
@@ -25,8 +26,8 @@
   
   "browser_action": {
     "default_icon": {
-      "19": "icons/icons8-book-shelf-19.png",
-      "38": "icons/icons8-book-shelf-38.png"
+      "19": "icons/bookmark19.png",
+      "38": "icons/bookmark38.png"
     },
     "default_title": "Show bookmarks",
     "default_popup": "popup/bm.html"
