@@ -14,8 +14,14 @@
 
   "permissions": [
     "bookmarks",
+    "activeTab",
     "tabs"
   ],
+
+  "options_ui": {
+    "page": "options/options.html",
+    "browser_style": true
+  },
   
   "browser_action": {
     "default_icon": {

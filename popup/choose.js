@@ -1,4 +1,8 @@
 var TREE,tNodes = [];
+var mLS = window.localStorage;
+
+var settings = {BINewWindowButton: mLS.getItem("BINewWindowButton"),
+                BICashed: mLS.getItem("BICashed")};
 
 function createBMbuttons(Tree,wrapper,limNum = 45){
     for(var i = 0; i<Tree.length && i < limNum; i++){
@@ -24,10 +28,22 @@ function createBMbuttons(Tree,wrapper,limNum = 45){
             }
             else{
                 aEl.setAttribute("to",item.url);
-                aEl.onclick = function() {
-                    var creating = browser.tabs.create(
-                        { url: this.getAttribute("to")}
-                    );
+                aEl.onmousedown = function(e) {
+                    console.log(e.which);
+                    if(e.which == Number(settings.BINewWindowButton)){
+                        console.log("new tab");
+                        var creating = browser.tabs.create(
+                            { url: this.getAttribute("to")}
+                        );
+                    }
+                    else{
+                        console.log("old tab");
+                        var gettingCurr = browser.tabs.getCurrent()
+                        var upd = browser.tabs.update(gettingCurr.id,
+                        {
+                            url: this.getAttribute("to")
+                        });
+                    }
                 };
                 var slidx=item.url.indexOf("//");
                 imgEl.setAttribute("src", "http://www.google.com/s2/favicons?domain="+item.url.slice(slidx+2,item.url.length));
