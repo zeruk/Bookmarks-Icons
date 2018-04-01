@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "BookmarksIcons",
-  "version": "1.3",
+  "version": "1.4",
   "author": "Zeruk",
 
   "description": "Makes your bookmarks smaller",
@@ -12,12 +12,20 @@
     "96": "icons/bookmark96.png"
   },
 
+  "applications": {
+    "gecko": {
+      "id": "{db2d8fb2-256f-49cb-8428-1d9c9505c94d}",
+      "strict_min_version": "48.0"
+    }
+  },
+
   "permissions": [
     "storage",
     "bookmarks",
     "activeTab",
     "tabs",
-    "management"
+    "management",
+    "webNavigation"
   ],
 
   "options_ui": {

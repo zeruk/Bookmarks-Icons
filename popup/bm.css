@@ -13,6 +13,7 @@ body{
     width: 790px;
     height: 16px;
     background-color: #f9f9fa;
+    overflow: hidden;
 }
 img{
     display: inline-block;
