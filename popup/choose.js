@@ -1,8 +1,33 @@
 var TREE,tNodes = [];
 var mLS = window.localStorage;
 
-var settings = {BINewWindowButton: mLS.getItem("BINewWindowButton"),
-                BICashed: mLS.getItem("BICashed")};
+var settings;
+var bookmTr;
+
+let gettingItem = browser.storage.local.get();
+gettingItem.then(function(setts){//on success
+    settings = setts;
+    createAll();
+}, setDefaults);
+
+function setDefaults(){
+    browser.storage.local.set({
+        BINewWindowButton:2
+    });
+    gettingItem.then(function(setts){
+        settings = setts;
+        createAll();
+    }, e => console.log(e));//on error
+}
+
+function createAll(){
+    bookmTr = browser.bookmarks.getTree(function(tree){
+        TREE = tree;
+        var bookm = TREE[0].children[1].children;
+        createBMbuttons(bookm,document.getElementById("wrapper"));
+    });
+}
+
 
 function createBMbuttons(Tree,wrapper,limNum = 45){
     for(var i = 0; i<Tree.length && i < limNum; i++){
@@ -61,9 +86,3 @@ function createBMbuttons(Tree,wrapper,limNum = 45){
         }
     }
 }
-
-var bookmTr = browser.bookmarks.getTree(function(tree){
-    TREE = tree;
-    var bookm = TREE[0].children[1].children;
-    createBMbuttons(bookm,document.getElementById("wrapper"));
-});
